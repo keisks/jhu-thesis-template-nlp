@@ -1,0 +1,85 @@
+% This template was originally by R. Jacob Vogelstein
+% Updated on March 1, 2010 by Noah J. Cowan
+% Updated by Brian D. Weitzner, April 29, 2014
+% Edited March, 2016 by Karla Hernandez
+% Edited September, 2017 by Keisuke Sakaguchi
+
+\documentclass[12pt,oneside,final]{thesis}
+
+\usepackage[english]{babel} % Multilingual support
+\usepackage{blindtext} % blind text for testing like lipsum
+
+%%%%%%%% ACL Style Bibliography %%%%%%%%%%
+\usepackage[style=authoryear-comp,citestyle=authoryear,natbib=true,backend=bibtex,maxbibnames=99,sorting=nyt,isbn=false,doi=false,dashed=false,url=true]{biblatex}
+\addbibresource{thesis.bib}
+\newcommand{\newcite}[1]{\citet{#1}}
+\renewcommand{\cite}[1]{\citep{#1}}
+\newcommand{\longcite}[1]{(\citeauthor*{#1}, \citeyear{#1})}
+\newcommand{\eg}[1]{\citep[e.g.,][]{#1}}
+\newcommand{\ie}[1]{\citep[i.e.,][]{#1}}
+
+%%%%%%%%%% Basic packages and settings %%%%%%%%%%
+\usepackage{amsmath,amsfonts}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage[linktocpage=true]{hyperref} 
+\usepackage{setspace}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\newlist{inlinelist}{enumerate*}{1}
+\setlist*[inlinelist,1]{%
+  label=(\arabic*),
+}
+
+\usepackage{fancyhdr}    % Use nice looking headers along with the required footer page numbers   
+
+%Define the header/footer style
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{15pt}
+\lhead{\leftmark}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt} % Remove line on page header by setting to 0pt
+\fancypagestyle{plain}{% Redefine ``plain'' style for chapter boundaries
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{\thepage} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+%\makeglossary % enable the glossary
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personal customizations (e.g., macros)
+\input{root-header}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{\uppercase{JHU Minimum Dissertation Template for NLP}}
+\author{Your Name Here}
+\degreemonth{Month}
+\degreeyear{Year} 
+\dissertation
+\doctorphilosophy
+\copyrightnotice
+
+
+% add your chapters, best way is to have separate TeX files for each chapter
+\include{src/frontmatter}
+\include{src/introduction}
+
+\appendix
+\include{src/appendix}
+
+%% REFERENCES
+% if you use BIBTEX
+
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,thesis} % PLEASE USE THE APPROPRIATE BIBLIOGRAPHY STYLE FOR YOUR DISSERTATION !!!!!!!!!!!!!
+\printbibliography
+
+\include{src/CV}
+
+\end{document}
