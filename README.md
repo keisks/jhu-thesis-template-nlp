@@ -12,7 +12,7 @@ Your dissertation will be compiled into the file "root.pdf" by running `make`.
 
 ## Features:
 - Minimal template for Ph.D. Dissertation.
-- Support ACL-style citation. (e.g., \cite, \newcite), thanks to Courtney.
+- Support ACL-style citation. (e.g., \cite, \newcite), thanks to Courtney Napoles.
 - Clickable table of contents page numbers.
 - First and Second reader now appear at the bottom of the page regardless of how long the abstract is.
 - Set default font to New Century.
