@@ -13,13 +13,12 @@ Your dissertation will be compiled into the file "root.pdf" by running `make`.
 ## Features:
 - Minimal template for Ph.D. Dissertation.
 - Support ACL-style citation. (e.g., `\cite`, `\newcite`), thanks to Courtney Napoles (@cnap).
-- Clickable table of contents page numbers.
+- Support PDF/A format ([FORMATTING GUIDELINES & CHECKLIST](https://www.library.jhu.edu/library-services/electronic-theses-dissertations/formatting-guidelines-checklist/)).
 - First and Second reader now appear at the bottom of the page regardless of how long the abstract is.
-- Set default font to New Century.
 
 ## Revision log:
 - Author: R. Jacob Vogelstein
 - Updated by Noah J. Cowan, March 1, 2010
 - Updated by Brian D. Weitzner, April 29, 2014
 - Edited by Karla Hernandez, March 23, 2016
-- Edited by Keisuke Sakaguchi, September 25, 2017
+- Edited by Keisuke Sakaguchi, November 10, 2017
