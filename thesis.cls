@@ -381,7 +381,7 @@ $\:\overline{~~~~ \mbox{\rule{0in}{0.16in}\small ~\hspace{3.5in} Date }}\:$ \\
     \dsp
     \chapter*{Dedication\@mkboth{DEDICATION}{DEDICATION}}
     \fmfont}
-\def\endacknowledgment{\par\vfil\null}
+\def\enddedication{\par\vfil\null}
 
 % ACKNOWLEDGMENTS
 %
