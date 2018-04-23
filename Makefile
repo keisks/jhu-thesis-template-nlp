@@ -4,7 +4,7 @@ SHELL = /bin/sh
 MAKE  = gmake
 
 TEX = pdflatex -file-line-error-style
-PAPERSIZE=a4
+PAPERSIZE=letter
 
 ######################################################################
 # output files
