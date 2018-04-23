@@ -747,7 +747,13 @@ $\:\overline{~~~~ \mbox{\rule{0in}{0.16in}\small ~\hspace{3.5in} Date }}\:$ \\
       \@tempswatrue           %       @tempswa := true
      \else \@tempswafalse     %  ELSE @tempswa := false
     \fi
-    \dsp                     % double spacing
+
+    % single spacing % added by Keisuke Sakaguchi 10 Jan 18.
+    \ifnum \@draftmark = 1
+     \ssp				  % Single-spaces
+     \else \dsp
+    \fi
+    %\dsp                     % double spacing
     \secdef\@chapter\@schapter}
     
 
@@ -834,7 +840,12 @@ $\:\overline{~~~~ \mbox{\rule{0in}{0.16in}\small ~\hspace{3.5in} Date }}\:$ \\
 %% by Jerry Leichter.
 %%
 \def\l@chapter#1#2{\addpenalty{-\@highpenalty}%
-   \dsp                   % 30 Mar 07 Added by RJV to restore spacing at chapter boundaries
+   %\dsp                   % 30 Mar 07 Added by RJV to restore spacing at chapter boundaries
+    % single spacing % added by Keisuke Sakaguchi 10 Jan 18.
+   \ifnum \@draftmark = 1
+    \ssp				  % Single-spaces
+    \else \dsp
+   \fi
    \vskip 1.0em plus\p@   % space above chapter line
    \@tempdima 1.5em       % width of box holding chapter number
    \begingroup
